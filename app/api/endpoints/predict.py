@@ -6,7 +6,7 @@ from PIL import Image
 from fastapi.responses import JSONResponse
 
 router = APIRouter()
-model = load_model()  # Memuat model saat aplikasi dijalankan
+model = load_model()  
 
 @router.post("/predict/")
 async def predict(file: UploadFile = File(...)):
